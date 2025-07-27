@@ -37,6 +37,9 @@ RUN python3.13 -m pip install --upgrade pip
 # グローバルにTypeScriptとViteをインストール
 RUN npm install -g typescript @types/node vite @vitejs/plugin-react
 
+# Warpify
+RUN echo -e '\n# Auto-Warpify\n[[ "$-" == *i* ]] && printf '\''\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash", "uname": "'$(uname)'", "tmux": false }}\x9c'\'' ' >> ~/.bashrc
+
 # 作業ディレクトリを設定
 WORKDIR /workspace
 
