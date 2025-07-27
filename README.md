@@ -5,17 +5,20 @@ TypeScript + React フロントエンドと Node.js・Python バックエンド�
 ## 🚀 技術スタック
 
 ### フロントエンド
-- **TypeScript** - 型安全なJavaScript
-- **React 18** - モダンなUIライブラリ
+
+- **TypeScript** - 型安全な JavaScript
+- **React 18** - モダンな UI ライブラリ
 - **Vite** - 高速なビルドツール
-- **Tailwind CSS** - ユーティリティファーストCSS
-- **Axios** - HTTPクライアント
+- **Tailwind CSS** - ユーティリティファースト CSS
+- **Axios** - HTTP クライアント
 
 ### バックエンド
+
 - **Node.js 22** - Express.js + TypeScript サーバー
 - **Python 3.13** - FastAPI サーバー
 
 ### 開発環境
+
 - **DevContainer** - 一貫した開発環境
 - **Docker** - コンテナ化された環境
 - **VS Code** - 統合開発環境
@@ -48,23 +51,27 @@ ai-playground/
 ## 🛠️ セットアップ
 
 ### 前提条件
+
 - Docker Desktop
 - VS Code
 - VS Code Dev Containers 拡張機能
 
 ### 1. リポジトリのクローン
+
 ```bash
 git clone <repository-url>
 cd ai-playground
 ```
 
-### 2. DevContainerでの開発環境起動
-1. VS Codeでプロジェクトを開く
+### 2. DevContainer での開発環境起動
+
+1. VS Code でプロジェクトを開く
 2. `Ctrl+Shift+P` (または `Cmd+Shift+P`) でコマンドパレットを開く
 3. "Dev Containers: Reopen in Container" を選択
 4. コンテナのビルドと起動を待つ
 
 ### 3. 依存関係のインストール
+
 コンテナ内で自動的に実行されますが、手動で実行する場合：
 
 ```bash
@@ -84,11 +91,13 @@ cd backend/python && pip install -r requirements.txt
 ## 🚀 開発サーバーの起動
 
 ### 全サービスを同時起動
+
 ```bash
 npm run dev
 ```
 
 ### 個別起動
+
 ```bash
 # フロントエンド (ポート 3000)
 npm run dev:frontend
@@ -100,7 +109,7 @@ npm run dev:nodejs
 npm run dev:python
 ```
 
-## 🌐 アクセスURL
+## 🌐 アクセス URL
 
 - **フロントエンド**: http://localhost:3000
 - **Node.js API**: http://localhost:8000
@@ -110,44 +119,50 @@ npm run dev:python
 ## 📡 API エンドポイント
 
 ### Node.js Backend (ポート 8000)
+
 - `GET /health` - ヘルスチェック
 - `GET /api/hello` - 挨拶メッセージ
 - `POST /api/calculate` - 計算機能
-- `GET /api/nodejs-info` - Node.js環境情報
+- `GET /api/nodejs-info` - Node.js 環境情報
 
 ### Python Backend (ポート 8888)
+
 - `GET /health` - ヘルスチェック
 - `GET /api/hello` - 挨拶メッセージ
 - `POST /api/calculate` - 計算機能
-- `GET /api/python-info` - Python環境情報
+- `GET /api/python-info` - Python 環境情報
 - `GET /docs` - API ドキュメント (Swagger UI)
 
 ## 🎯 機能
 
 ### フロントエンド
-- モダンなReact UI
-- TypeScriptによる型安全
-- Tailwind CSSによるスタイリング
-- Node.js・Pythonバックエンドとの通信
+
+- モダンな React UI
+- TypeScript による型安全
+- Tailwind CSS によるスタイリング
+- Node.js・Python バックエンドとの通信
 
 ### バックエンド
-- **Node.js 22**: Express.js + TypeScriptによる型安全なRESTful API
-- **Python 3.13**: FastAPIによる高性能API
-- CORS設定済み
+
+- **Node.js 22**: Express.js + TypeScript による型安全な RESTful API
+- **Python 3.13**: FastAPI による高性能 API
+- CORS 設定済み
 - エラーハンドリング
 - ヘルスチェックエンドポイント
 
 ## 🔧 開発
 
 ### コードフォーマット
+
 - **TypeScript/JavaScript**: Prettier + ESLint
 - **Python**: Black + Flake8
 
 ### ホットリロード
-- フロントエンド: Viteによる高速HMR
-- Node.js: Nodemonによる自動再起動
-- Python: Uvicornによる自動再起動
 
-## �� ライセンス
+- フロントエンド: Vite による高速 HMR
+- Node.js: Nodemon による自動再起動
+- Python: Uvicorn による自動再起動
 
-MIT License 
+## ライセンス
+
+MIT License
