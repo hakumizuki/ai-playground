@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    environment:
+      - NODE_ENV=development
+      - PYTHONPATH=/workspace/backend/python
+    ports:
+      - "3000:3000"  # Frontend
+      - "8000:8000"  # Node.js backend
+      - "8888:8888"  # Python backend 

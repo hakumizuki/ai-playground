@@ -1,0 +1,27 @@
+{
+  "name": "ai-playground",
+  "version": "1.0.0",
+  "description": "AI Playground with TypeScript frontend and Node.js/Python backends",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:nodejs\" \"npm run dev:python\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:nodejs": "cd backend/nodejs && npm run dev",
+    "dev:python": "cd backend/python && python app.py",
+    "build": "npm run build:frontend && npm run build:nodejs",
+    "build:frontend": "cd frontend && npm run build",
+    "build:nodejs": "cd backend/nodejs && npm run build",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend/nodejs && npm install && cd ../python && pip install -r requirements.txt",
+    "install:frontend": "cd frontend && npm install",
+    "install:nodejs": "cd backend/nodejs && npm install",
+    "install:python": "cd backend/python && pip install -r requirements.txt",
+    "format:python": "cd backend/python && black . && isort .",
+    "format:python:check": "cd backend/python && black --check . && isort --check-only ."
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "frontend",
+    "backend/nodejs"
+  ]
+}
