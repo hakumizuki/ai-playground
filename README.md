@@ -38,7 +38,6 @@ ai-playground/
 │   ├── package.json
 │   └── vite.config.ts
 ├── backend/
-│   ├── nodejs/            # Node.js 22 + Express + TypeScript
 │   │   ├── src/
 │   │   │   └── server.ts
 │   │   ├── tsconfig.json
@@ -46,8 +45,6 @@ ai-playground/
 │   └── python/            # Python + FastAPI
 │       ├── app.py
 │       └── requirements.txt
-├── package.json           # ルート設定
-└── README.md
 ```
 
 ## 🛠️ セットアップ
@@ -125,23 +122,6 @@ npm run warp
 - **Python API**: http://localhost:8888
 - **Python API Docs**: http://localhost:8888/docs
 
-## 📡 API エンドポイント
-
-### Node.js Backend (ポート 8000)
-
-- `GET /health` - ヘルスチェック
-- `GET /api/hello` - 挨拶メッセージ
-- `POST /api/calculate` - 計算機能
-- `GET /api/nodejs-info` - Node.js 環境情報
-
-### Python Backend (ポート 8888)
-
-- `GET /health` - ヘルスチェック
-- `GET /api/hello` - 挨拶メッセージ
-- `POST /api/calculate` - 計算機能
-- `GET /api/python-info` - Python 環境情報
-- `GET /docs` - API ドキュメント (Swagger UI)
-
 ## 🎯 機能
 
 ### フロントエンド
@@ -153,11 +133,36 @@ npm run warp
 
 ### バックエンド
 
-- **Node.js 22**: Express.js + TypeScript による型安全な RESTful API
+- **Node.js 22**: Express.js + TypeScript + Mastra
 - **Python 3.13**: FastAPI による高性能 API
 - CORS 設定済み
 - エラーハンドリング
 - ヘルスチェックエンドポイント
+
+## 🤖 Mastra AI エージェント (Node.js バックエンド)
+
+### セットアップ
+
+1. **環境変数の設定**
+
+```bash
+# backend/nodejs/.env ファイルを作成
+echo "OPENAI_API_KEY=<your-api-key>" > backend/nodejs/.env
+```
+
+2. **Node.js バックエンドの起動**
+
+```bash
+npm run dev:nodejs
+```
+
+### カスタムエージェントの作成
+
+1. `backend/nodejs/src/mastra/tools/` にツールを作成
+2. `backend/nodejs/src/mastra/agents/` にエージェントを作成
+3. `backend/nodejs/src/mastra/index.ts` でエージェントを登録
+
+詳細は [Mastra ドキュメント](https://mastra.ai/ja/docs) を参照してください。
 
 ## 🔧 開発
 
