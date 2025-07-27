@@ -1,5 +1,7 @@
 # AI Playground
 
+[![Open in Dev Containers](https://img.shields.io/badge/Open%20in-Dev%20Containers-blue?logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/your-username/ai-playground)
+
 TypeScript + React フロントエンドと Node.js・Python バックエンドを持つモダンな開発環境です。
 
 ## 🚀 技術スタック
